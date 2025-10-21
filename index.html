@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark 3 Portable Fire Pump - Training & Specifications</title>
+    <meta name="description" content="Training, specifications, maintenance schedule, and resources for the Mark 3 Portable Fire Pump.">
+    <link rel="icon" href="data:," />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .equipment-id {
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .alert-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .alert-box strong {
+            color: #856404;
+        }
+        
+        .video-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .video-placeholder {
+            background: #000;
+            height: 400px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-placeholder::before {
+            content: "▶";
+            font-size: 60px;
+            opacity: 0.7;
+            position: absolute;
+        }
+        
+        .video-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .video-tab {
+            padding: 8px 16px;
+            background: #e9ecef;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .video-tab:hover {
+            background: #c41e3a;
+            color: white;
+        }
+        
+        .video-tab.active {
+            background: #c41e3a;
+            color: white;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .spec-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .spec-card h3 {
+            color: #c41e3a;
+            margin-bottom: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+        
+        .spec-label {
+            font-weight: 500;
+            color: #666;
+        }
+        
+        .spec-value {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .download-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .download-btn:hover {
+            background: #c41e3a;
+            color: white;
+            border-color: #c41e3a;
+        }
+        
+        .maintenance-schedule {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .schedule-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px;
+            margin: 10px 0;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        
+        .schedule-frequency {
+            background: #c41e3a;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        
+        .qr-demo {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .qr-code-placeholder {
+            width: 200px;
+            height: 200px;
+            background: #f0f0f0;
+            margin: 20px auto;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #666;
+        }
+        
+        .offline-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #28a745;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .video-placeholder {
+                height: 250px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚒 MARK 3 PORTABLE FIRE PUMP</h1>
+        <p>Fire Department Equipment Training Portal</p>
+        <div class="equipment-id">Equipment ID: PMP-001</div>
+    </div>
+
+    <div class="container">
+        <!-- Safety Alert -->
+        <div class="alert-box">
+            <strong>⚠️ SAFETY NOTICE:</strong> Always wear appropriate PPE when operating this equipment. Ensure proper ventilation when running the engine.
+        </div>
+
+        <!-- Video Section -->
+        <div class="video-section">
+            <h2 style="margin-bottom: 15px;">📹 Training Videos</h2>
+            <div class="video-tabs">
+                <button class="video-tab active">Basic Operation</button>
+                <button class="video-tab">Starting Procedure</button>
+                <button class="video-tab">Maintenance</button>
+                <button class="video-tab">Troubleshooting</button>
+            </div>
+            <!-- Replace the div below with a real YouTube embed by swapping this block with the iframe in README -->
+            <div class="video-placeholder">
+                [YouTube Video Embed Here]
+            </div>
+            <div class="offline-badge">
+                ✓ Available Offline
+            </div>
+            <p style="color: #666; font-size: 14px; margin-top: 10px;">
+                Tap the download button in YouTube app to save for offline viewing
+            </p>
+        </div>
+
+        <!-- Specifications Grid -->
+        <div class="specs-grid">
+            <div class="spec-card">
+                <h3>⚙️ Engine Specifications</h3>
+                <div class="spec-item">
+                    <span class="spec-label">Model:</span>
+                    <span class="spec-value">Honda GX390</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Power:</span>
+                    <span class="spec-value">13 HP</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Fuel Type:</span>
+                    <span class="spec-value">Unleaded Gas</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Tank Capacity:</span>
+                    <span class="spec-value">6.4 Liters</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Oil Capacity:</span>
+                    <span class="spec-value">1.1 Liters</span>
+                </div>
+            </div>
+
+            <div class="spec-card">
+                <h3>💧 Pump Performance</h3>
+                <div class="spec-item">
+                    <span class="spec-label">Max Flow:</span>
+                    <span class="spec-value">550 GPM</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Max Pressure:</span>
+                    <span class="spec-value">150 PSI</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Suction Size:</span>
+                    <span class="spec-value">3 inch</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Discharge:</span>
+                    <span class="spec-value">2.5 inch</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Max Lift:</span>
+                    <span class="spec-value">25 feet</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <h3 style="margin-bottom: 10px;">📚 Documentation & Resources</h3>
+            <div class="download-grid">
+                <a class="download-btn" href="#" download>
+                    📕 Operator Manual
+                </a>
+                <a class="download-btn" href="#" download>
+                    🔧 Parts Catalog
+                </a>
+                <a class="download-btn" href="#" download>
+                    ⚠️ Safety Guidelines
+                </a>
+                <a class="download-btn" href="#" download>
+                    📋 Daily Checklist
+                </a>
+            </div>
+        </div>
+
+        <!-- Maintenance Schedule -->
+        <div class="maintenance-schedule">
+            <h3 style="margin-bottom: 15px;">🔧 Maintenance Schedule</h3>
+            <div class="schedule-item">
+                <span class="schedule-frequency">DAILY</span>
+                <span>Check oil level, fuel level, and visual inspection</span>
+            </div>
+            <div class="schedule-item">
+                <span class="schedule-frequency">WEEKLY</span>
+                <span>Test run for 10 minutes, check all connections</span>
+            </div>
+            <div class="schedule-item">
+                <span class="schedule-frequency">MONTHLY</span>
+                <span>Clean air filter, check spark plug, test pressure relief valve</span>
+            </div>
+            <div class="schedule-item">
+                <span class="schedule-frequency">ANNUAL</span>
+                <span>Complete service, replace filters, professional inspection</span>
+            </div>
+        </div>
+
+        <!-- QR Code Demo -->
+        <div class="qr-demo">
+            <h3 style="margin-bottom: 10px;">📱 QR Code Access</h3>
+            <p style="color: #666; margin-bottom: 15px;">This page would be accessed by scanning the QR code on the equipment</p>
+            <div class="qr-code-placeholder">
+                [QR CODE]
+            </div>
+            <p style="font-size: 14px; color: #666;">
+                Scan code on actual equipment to access this training page instantly
+            </p>
+        </div>
+    </div>
+</body>
+</html>
