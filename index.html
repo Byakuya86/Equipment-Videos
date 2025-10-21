@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mark 3 Portable Fire Pump - Training & Specifications</title>
+    <title>Lukas Spreaders SP 775 e3 - Training & Specifications</title>
     <meta name="description" content="Training, specifications, maintenance schedule, and resources for the Mark 3 Portable Fire Pump.">
     <link rel="icon" href="data:," />
     <style>
@@ -277,38 +277,45 @@
 </head>
 <body>
     <div class="header">
-        <h1>🚒 MARK 3 PORTABLE FIRE PUMP</h1>
-        <p>Fire Department Equipment Training Portal</p>
-        <div class="equipment-id">Equipment ID: PMP-001</div>
+        <h1>Lukas Spreaders SP 775 e3</h1>
+        <p>Fire Department Equipment Operating Procedures</p>
+        <div class="equipment-id">Equipment ID: LS-001</div>
     </div>
 
     <div class="container">
         <!-- Safety Alert -->
         <div class="alert-box">
-            <strong>⚠️ SAFETY NOTICE:</strong> Always wear appropriate PPE when operating this equipment. Ensure proper ventilation when running the engine.
+            <strong>⚠️ SAFETY NOTICE:</strong> Always wear appropriate PPE when operating this equipment.
         </div>
 
         <!-- Video Section -->
-        <div class="video-section">
-            <h2 style="margin-bottom: 15px;">📹 Training Videos</h2>
-            <div class="video-tabs">
-                <button class="video-tab active">Basic Operation</button>
-                <button class="video-tab">Starting Procedure</button>
-                <button class="video-tab">Maintenance</button>
-                <button class="video-tab">Troubleshooting</button>
-            </div>
+        <div class="video-tabs">
+          <button class="video-tab active" data-video="7GHcCAtL7E0" data-title="Basic Operation">
+            Basic Operation
+          </button>
+          <button class="video-tab" data-video="VIDEO_ID_STARTING" data-title="Starting Procedure">
+            Starting Procedure
+          </button>
+          <button class="video-tab" data-video="VIDEO_ID_MAINT" data-title="Maintenance">
+            Maintenance
+          </button>
+          <button class="video-tab" data-video="VIDEO_ID_TROUBLE" data-title="Troubleshooting">
+            Troubleshooting
+          </button>
+        </div>
             <!-- Replace the div below with a real YouTube embed by swapping this block with the iframe in README -->
-            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
-                      <iframe
-                        src="https://www.youtube.com/embed/7GHcCAtL7E0?si=m8tsdhZAkDbT5-_C"
-                        title="Mark 3 Portable Fire Pump - Training Video"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                      </iframe>
-                    </div>
+            <div id="operating-video" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;margin-top:15px;">
+                  <iframe
+                    id="video-frame"
+                    src="https://www.youtube.com/embed/7GHcCAtL7E0?rel=0"
+                    title="Basic Operation"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                  </iframe>
+                </div>
             <div class="offline-badge">
                 ✓ Available Offline
             </div>
@@ -420,5 +427,46 @@
             </p>
         </div>
     </div>
+    
+<script>
+  (function () {
+    const tabs = document.querySelectorAll('.video-tab');
+    const frameContainer = document.getElementById('operating-video');
+    const YT_BASE = 'https://www.youtube.com/embed/';
+
+    function setVideo(videoId, title) {
+      // Replacing the iframe element resets playback (so the previous video stops)
+      frameContainer.innerHTML = `
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;margin-top:15px;">
+          <iframe
+            src="${YT_BASE}${videoId}?rel=0"
+            title="${title || 'Training Video'}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;">
+          </iframe>
+        </div>`;
+    }
+
+    function activateTab(btn) {
+      tabs.forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-video');
+        const title = btn.getAttribute('data-title') || btn.textContent.trim();
+        if (!id) return;
+        activateTab(btn);
+        setVideo(id, title);
+        // Optional: ensure the video is in view after switching
+        document.getElementById('operating-video').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  })();
+</script>   
 </body>
 </html>
